@@ -25,12 +25,15 @@ The growth of e-commerce has given consumers many alternatives, but product spec
 Online shoppers comparing similar headphones, particularly those who are not technical experts and want plain-language differences backed by evidence.
 
 ## Data Sources
-- Source 1: Amazon Reviews 2023, product metadata (descriptions, features, details; price is a 2023 snapshot field and is not used as current pricing) for the headphones subcategory. URL: https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023
-- Source 2: Amazon Reviews 2023, user reviews (ratings, text, helpfulness votes) for the same subcategory. URL: https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023
-- Source 3: Olive, S. E. (2021). The perception and measurement of headphone sound quality: What do listeners prefer? *Acoustics Today, 18*(1), 58. URL: https://doi.org/10.1121/at.2022.18.1.58
-- Source 4: Cotton, D. (2021). Headphone essentials 3: Basics of headphone types and tech (Version 1.31). Daystar Visions. URL: http://daystarvisions.com/Music/HE3-Basics_of_Headphone_Types_and_Tech.pdf
+- Source 1 (S01): Amazon Reviews 2023, item metadata for the headphones category (Electronics, "Headphones & Earbuds"). Hou et al. (2024), McAuley Lab, UC San Diego. URL: [https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023](https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023)
+- Source 2 (S02): Amazon Reviews 2023, customer reviews of the same products (first 500,000 review rows scanned). URL: [https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023](https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023)
+- Source 3 (S03): Lee, E. M., Subramaniam, C., & Park, S. (2025). Perceived risk and fashion on the intention to adopt wireless earbuds in the United States using a partial least squares-structural equation modeling approach: Empirical study. _JMIR Formative Research, 9_, e56887. CC BY 4.0. URL: [https://doi.org/10.2196/56887](https://doi.org/10.2196/56887)
+- Source 4 (S04): Gutierrez-Parera, P., & Lopez, J. J. (2016). Influence of the quality of consumer headphones in the perception of spatial audio. _Applied Sciences, 6_(4), 117. CC BY. URL: [https://doi.org/10.3390/app6040117](https://doi.org/10.3390/app6040117)
+- Source 5 (S05): Välimäki, V., & Reiss, J. D. (2016). All about audio equalization: Solutions and frontiers. _Applied Sciences, 6_(5), 129. CC BY. URL: [https://doi.org/10.3390/app6050129](https://doi.org/10.3390/app6050129)
 
 ## Weekly Progress
-| Week | Focus | Deliverable | Status |
-|------|-------|-------------|--------|
-| W1 | System map + project scope | README + docs | ✅ |
+| Week | Focus                                              | Deliverable                                                                                                                                                                              | Status |
+| ---- | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| W1   | System map + project scope                         | README + docs                                                                                                                                                                            | ✅      |
+| W2   | Requirements, evaluation criteria, V1 architecture | `docs/week2_requirements.md`, `docs/week2_evaluation_criteria.md`, `docs/week2_architecture_decisions.md`                                                                                | ✅      |
+| W3   | Data inventory, data preparation, V1 data pipeline | `notebooks/week3_pipeline.ipynb`, `docs/week3_data_inventory.md`, `docs/week3_pipeline_diagram.png`, `docs/week3_pipeline_decisions.md`, `data/week3_manifest.json`, `data/pipeline_v1/` | ✅      |

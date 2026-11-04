@@ -1,0 +1,114 @@
+{
+  "pipeline_version": "week3-v1",
+  "generated_at_utc": "2026-11-04T08:09:58.311527+00:00",
+  "data_type": "json",
+  "configuration": {
+    "s01": {
+      "config": "A",
+      "required_keys": [
+        "parent_asin",
+        "title"
+      ]
+    },
+    "s02": {
+      "config": "B",
+      "required_keys": [
+        "parent_asin",
+        "rating",
+        "text"
+      ]
+    },
+    "invalid_record_policy": "exclude"
+  },
+  "processing_method": "JSONL to prepared JSONL; prepared_meta.jsonl: config=A, out=56043, excluded=5; prepared_reviews.jsonl: config=B, out=39033, excluded=13",
+  "sources": [
+    {
+      "path": "/content/week3_project/data/raw/s01_headphones_meta.jsonl",
+      "sha256": "6e03dc55fa0b47e8014dae271d29f0adee1aefa7ee97f97cfd0e5f22831de1ab"
+    },
+    {
+      "path": "/content/week3_project/data/raw/s02_headphones_reviews.jsonl",
+      "sha256": "ae3306e6a4922a2182000d71baec9f8ba7d5e7cb6fcc1bb76404ccbf1c308d45"
+    }
+  ],
+  "outputs": [
+    "/content/week3_project/data/pipeline_v1/json/prepared_meta.jsonl",
+    "/content/week3_project/data/pipeline_v1/json/prepared_reviews.jsonl"
+  ],
+  "source_output_mapping": [
+    {
+      "source": "/content/week3_project/data/raw/s01_headphones_meta.jsonl",
+      "output": "/content/week3_project/data/pipeline_v1/json/prepared_meta.jsonl",
+      "records_out": 56043
+    },
+    {
+      "source": "/content/week3_project/data/raw/s02_headphones_reviews.jsonl",
+      "output": "/content/week3_project/data/pipeline_v1/json/prepared_reviews.jsonl",
+      "records_out": 39033
+    }
+  ],
+  "inspection": {
+    "s01_headphones_meta.jsonl": {
+      "record_count": 56048,
+      "valid_records": 56043,
+      "excluded_records": 5,
+      "required_keys": [
+        "parent_asin",
+        "title"
+      ],
+      "first_keys": [
+        "main_category",
+        "title",
+        "average_rating",
+        "rating_number",
+        "features",
+        "description",
+        "price",
+        "images",
+        "videos",
+        "store",
+        "categories",
+        "details",
+        "parent_asin",
+        "bought_together",
+        "subtitle",
+        "author"
+      ]
+    },
+    "s02_headphones_reviews.jsonl": {
+      "record_count": 39046,
+      "valid_records": 39033,
+      "excluded_records": 13,
+      "required_keys": [
+        "parent_asin",
+        "rating",
+        "text"
+      ],
+      "first_keys": [
+        "rating",
+        "title",
+        "text",
+        "images",
+        "asin",
+        "parent_asin",
+        "user_id",
+        "timestamp",
+        "helpful_vote",
+        "verified_purchase"
+      ]
+    }
+  },
+  "validation": {
+    "output_count": 2,
+    "output_sha256": [
+      "dc0e5179fddfbfd9079d182518cf74f454837e0b28c0e1397ed23ab0bde23d8e",
+      "597ff3580141eb506701f793933fe62cd1065d4620f5cc3513ae6cff4cda2237"
+    ],
+    "output_bytes": [
+      116351166,
+      23906805
+    ]
+  },
+  "source_version": "See data/week3_manifest.json and docs/week3_data_inventory.md",
+  "access_rights": "Not verified for sharing: S01 and S02 have no stated licence. Check before sharing."
+}

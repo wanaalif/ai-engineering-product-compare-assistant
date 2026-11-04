@@ -1,0 +1,66 @@
+{
+  "pipeline_version": "week3-v1",
+  "generated_at_utc": "2026-11-04T08:08:56.112123+00:00",
+  "records": [
+    {
+      "source_id": "S01",
+      "source_filename": "s01_headphones_meta.jsonl",
+      "source_sha256": "6e03dc55fa0b47e8014dae271d29f0adee1aefa7ee97f97cfd0e5f22831de1ab",
+      "prepared_output": "data/processed/prepared_meta.jsonl",
+      "prepared_sha256": "dc0e5179fddfbfd9079d182518cf74f454837e0b28c0e1397ed23ab0bde23d8e",
+      "processing_note": "JSONL to prepared JSONL; config=A; required_keys=['parent_asin', 'title']; keep text, rating, store and category fields; drop images/videos/bought_together/subtitle/author; parse details JSON string; price kept as 2023 snapshot; add has_* flags; excluded_records=5",
+      "source_version": "McAuley-Lab/Amazon-Reviews-2023, config raw_meta_Electronics, revision 2b6d039ed471f2ba5fd2acb718bf33b0a7e5598e",
+      "access_rights": "Public download. No licence stated on the dataset card (checked 2/11/2026). Coursework use only; raw and full prepared data are not committed.",
+      "provenance_limitations": "Licence not stated; 2023 snapshot; description present for about 57% of products; price for about 22%.",
+      "status": "Prepared; quality review pending (Topic 4)"
+    },
+    {
+      "source_id": "S02",
+      "source_filename": "s02_headphones_reviews.jsonl",
+      "source_sha256": "ae3306e6a4922a2182000d71baec9f8ba7d5e7cb6fcc1bb76404ccbf1c308d45",
+      "prepared_output": "data/processed/prepared_reviews.jsonl",
+      "prepared_sha256": "597ff3580141eb506701f793933fe62cd1065d4620f5cc3513ae6cff4cda2237",
+      "processing_note": "JSONL to prepared JSONL; config=B; required_keys=['parent_asin', 'rating', 'text']; strip HTML tags and decode entities; drop user_id and images; add review_date_utc; excluded_records=13",
+      "source_version": "McAuley-Lab/Amazon-Reviews-2023, config raw_review_Electronics, revision 2b6d039ed471f2ba5fd2acb718bf33b0a7e5598e, first 500000 rows scanned",
+      "access_rights": "Same rights as S01. Review text written by Amazon customers; user_id is dropped from prepared data.",
+      "provenance_limitations": "Licence not stated; only the first scanned rows are used, so the subset is not a random sample of all reviews.",
+      "status": "Prepared; quality review pending (Topic 4)"
+    },
+    {
+      "source_id": "S03",
+      "source_filename": "s03_lee_2025_wireless_earbuds.pdf",
+      "source_sha256": "8d7622a8d0627d1d27fb53f9252f44259d27c6a04d686d952256105c96da309d",
+      "prepared_output": "data/processed/prepared_text.jsonl",
+      "prepared_sha256": "f4e08cf3bee8b9b94dcb44f5fcee4750733221d010a8eb1a2f66dacf362b2443",
+      "processing_note": "page-aware-sentence-pack-target800-max1000; per-page text; running headers and references removed; rules={\"windows\": null, \"cut_regex\": \"^references$\"}",
+      "source_version": "JMIR Formative Research 9, e56887 (2025)",
+      "access_rights": "Open access, CC BY 4.0 (article page footer, checked 4/11/2026). Reuse with credit.",
+      "provenance_limitations": "Contains health-risk discussion; FR8 forbids health advice.",
+      "status": "Prepared; quality review pending (Topic 4)"
+    },
+    {
+      "source_id": "S04",
+      "source_filename": "s04_gutierrez_parera_2016_headphone_quality.pdf",
+      "source_sha256": "c9efada9bbd3b891a092dc306e589fba1221441b0a018b95956473dbb26a4e7c",
+      "prepared_output": "data/processed/prepared_text.jsonl",
+      "prepared_sha256": "f4e08cf3bee8b9b94dcb44f5fcee4750733221d010a8eb1a2f66dacf362b2443",
+      "processing_note": "page-aware-sentence-pack-target800-max1000; per-page text; running headers and references removed; rules={\"windows\": null, \"cut_regex\": \"^references$\"}",
+      "source_version": "Applied Sciences 6(4), 117 (2016)",
+      "access_rights": "Open access, CC BY 4.0. Confirm the version printed in the PDF.",
+      "provenance_limitations": "Small listening test with simulated headphones.",
+      "status": "Prepared; quality review pending (Topic 4)"
+    },
+    {
+      "source_id": "S05",
+      "source_filename": "s05_valimaki_reiss_2016_equalization.pdf",
+      "source_sha256": "06653abb3403cbd5a3c1bad8c69f93c72ef956b9259b6af8cde26afe9b3e9e51",
+      "prepared_output": "data/processed/prepared_text.jsonl",
+      "prepared_sha256": "f4e08cf3bee8b9b94dcb44f5fcee4750733221d010a8eb1a2f66dacf362b2443",
+      "processing_note": "page-aware-sentence-pack-target800-max1000; per-page text; running headers and references removed; rules={\"windows\": [[\"^1\\\\.\\\\s+introduction$\", \"^2\\\\.\\\\s+history of audio equalization$\"], [\"^6\\\\.\\\\s+sound reproduction applications$\", \"^7\\\\.\\\\s+audio content creation$\"]], \"cut_regex\": \"^references$\"}",
+      "source_version": "Applied Sciences 6(5), 129 (2016)",
+      "access_rights": "Open access, CC BY 4.0. Confirm the version printed in the PDF.",
+      "provenance_limitations": "Only Sections 1 and 6 are kept.",
+      "status": "Prepared; quality review pending (Topic 4)"
+    }
+  ]
+}

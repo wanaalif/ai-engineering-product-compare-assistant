@@ -1,6 +1,5 @@
 # Week 1 Project Scope: Product Compare Assistant
 
-
 | Field            | Content                                        |
 | ---------------- | ---------------------------------------------- |
 | **Project Name** | Product Compare Assistant                      |
@@ -13,14 +12,12 @@ Product specifications, descriptions, and customer reviews are often distributed
 Existing search and filtering tools help user narrow product selections but do not provide contextual explanations that answer natural-language comparison questions (Vedula et al., 2023).
 This project applies AI engineering, specifically retrieval-augmented generation with citation and refusal guardrails, to retrieve evidence from product documents, generate explainable comparisons, and ground every answer in retrieved sources to improve transparency and reliability.
 
-
 ## Evidence of the Problem
 
 |                |                                                                                                                                                                                                                                                                            |
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Evidence 1** | Amsl, S., Watson, I., Teller, C., & Wood, S. (2023). Presenting products on websites – the importance of information quality criteria for online shoppers. International Journal of Retail & Distribution Management, 51(9/10). https://doi.org/10.1108/ijrdm-04-2023-0266 |
 | **Evidence 2** | Vedula, Collins, M. D, Agichtein, E., & Oleg Rokhlenko. (2023). Generating explainable product comparisons for online shopping. https://doi.org/10.1145/3539597.3570489                                                                                                    |
-
 
 ## Initial Related Work
 
@@ -58,13 +55,13 @@ Online shoppers comparing similar headphones, particularly those who are not tec
 
 ## Data Sources
 
-|              |                                                                                                                                                                                                                                                                                                               |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Source 1** | Amazon Reviews 2023, product metadata (descriptions, features, details; price is a 2023 snapshot field and is not used as current pricing) for the headphones subcategory. URL: [McAuley-Lab/Amazon-Reviews-2023 · Datasets at Hugging Face](https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023) |
-| **Source 2** | Amazon Reviews 2023, user reviews (ratings, text, helpfulness votes, etc.) for the same headphones subcategory. Same URL as Source 1.                                                                                                                                                                         |
-| **Source 3** | Olive, S. E. (2021). The perception and measurement of headphone sound quality: What do listeners prefer? _Acoustics Today_, _18_(1), 58. [https://doi.org/10.1121/at.2022.18.1.58](https://doi.org/10.1121/at.2022.18.1.58)                                                                                  |
-| **Source 4** | Cotton, D. (2021). _Headphone essentials 3: Basics of headphone types and tech_ (Version 1.31). Daystar Visions. [http://daystarvisions.com/Music/HE3-Basics_of_Headphone_Types_and_Tech.pdf](http://daystarvisions.com/Music/HE3-Basics_of_Headphone_Types_and_Tech.pdf)                                     |
-
+|              |                                                                                                                                                                                                                                                                                                                    |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Source 1** | Amazon Reviews 2023, product metadata (descriptions, features, details; price is a 2023 snapshot field and is not used as current pricing) for the headphones subcategory. URL: [McAuley-Lab/Amazon-Reviews-2023 · Datasets at Hugging Face](https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023)      |
+| **Source 2** | Amazon Reviews 2023, user reviews (ratings, text, helpfulness votes, etc.) for the same headphones subcategory. Same URL as Source 1.                                                                                                                                                                              |
+| **Source 3** | Lee, E. M., Subramaniam, C., & Park, S. (2025). Perceived risk and fashion on the intention to adopt wireless earbuds in the United States using a partial least squares-structural equation modeling approach: Empirical study. _JMIR Formative Research_, _9_, Article v9i1e56887. https://doi.org/10.2196/56887 |
+| **Source 4** | Gutierrez-Parera, P., & Lopez, J. J. (2016). Influence of the quality of consumer headphones in the perception of spatial audio. _Applied Sciences, 6_(4), 117. https://doi.org/10.3390/app6040117                                                                                                                 |
+| **Source 5** | Välimäki, V., & Reiss, J. D. (2016). All about audio equalization: Solutions and frontiers. _Applied Sciences, 6_(5), 129. https://doi.org/10.3390/app6050129                                                                                                                                                      |
 
 ## Similar to EduAdvisor
 

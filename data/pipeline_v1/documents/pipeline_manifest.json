@@ -1,0 +1,114 @@
+{
+  "pipeline_version": "week3-v1",
+  "generated_at_utc": "2026-11-04T08:10:15.095977+00:00",
+  "data_type": "documents",
+  "configuration": {
+    "method": "page-aware-sentence-pack",
+    "target_chars": 800,
+    "max_chars": 1000,
+    "rules": {
+      "S03": {
+        "windows": null,
+        "cut_regex": "^references$"
+      },
+      "S04": {
+        "windows": null,
+        "cut_regex": "^references$"
+      },
+      "S05": {
+        "windows": [
+          [
+            "^1\\.\\s+introduction$",
+            "^2\\.\\s+history of audio equalization$"
+          ],
+          [
+            "^6\\.\\s+sound reproduction applications$",
+            "^7\\.\\s+audio content creation$"
+          ]
+        ],
+        "cut_regex": "^references$"
+      }
+    }
+  },
+  "processing_method": "page-aware-sentence-pack target=800 max=1000; per-page text, running headers and references removed",
+  "sources": [
+    {
+      "path": "/content/week3_project/data/raw/s03_lee_2025_wireless_earbuds.pdf",
+      "sha256": "8d7622a8d0627d1d27fb53f9252f44259d27c6a04d686d952256105c96da309d"
+    },
+    {
+      "path": "/content/week3_project/data/raw/s04_gutierrez_parera_2016_headphone_quality.pdf",
+      "sha256": "c9efada9bbd3b891a092dc306e589fba1221441b0a018b95956473dbb26a4e7c"
+    },
+    {
+      "path": "/content/week3_project/data/raw/s05_valimaki_reiss_2016_equalization.pdf",
+      "sha256": "06653abb3403cbd5a3c1bad8c69f93c72ef956b9259b6af8cde26afe9b3e9e51"
+    }
+  ],
+  "outputs": [
+    "/content/week3_project/data/pipeline_v1/documents/prepared_text.jsonl"
+  ],
+  "source_output_mapping": [
+    {
+      "source": "/content/week3_project/data/raw/s03_lee_2025_wireless_earbuds.pdf",
+      "output": "/content/week3_project/data/pipeline_v1/documents/prepared_text.jsonl",
+      "chunks": 48,
+      "selection": {
+        "pages_total": 11,
+        "pages_kept": 8,
+        "repeated_lines_removed": 30,
+        "references_cut": true
+      }
+    },
+    {
+      "source": "/content/week3_project/data/raw/s04_gutierrez_parera_2016_headphone_quality.pdf",
+      "output": "/content/week3_project/data/pipeline_v1/documents/prepared_text.jsonl",
+      "chunks": 65,
+      "selection": {
+        "pages_total": 18,
+        "pages_kept": 17,
+        "repeated_lines_removed": 17,
+        "references_cut": true
+      }
+    },
+    {
+      "source": "/content/week3_project/data/raw/s05_valimaki_reiss_2016_equalization.pdf",
+      "output": "/content/week3_project/data/pipeline_v1/documents/prepared_text.jsonl",
+      "chunks": 34,
+      "selection": {
+        "pages_total": 46,
+        "pages_kept": 8,
+        "repeated_lines_removed": 45,
+        "references_cut": true
+      }
+    }
+  ],
+  "inspection": {
+    "s03_lee_2025_wireless_earbuds.pdf": {
+      "pages": 11,
+      "pages_with_text": 11,
+      "characters": 46276
+    },
+    "s04_gutierrez_parera_2016_headphone_quality.pdf": {
+      "pages": 18,
+      "pages_with_text": 18,
+      "characters": 55377
+    },
+    "s05_valimaki_reiss_2016_equalization.pdf": {
+      "pages": 46,
+      "pages_with_text": 46,
+      "characters": 160258
+    }
+  },
+  "validation": {
+    "output_count": 1,
+    "output_sha256": [
+      "f4e08cf3bee8b9b94dcb44f5fcee4750733221d010a8eb1a2f66dacf362b2443"
+    ],
+    "output_bytes": [
+      177872
+    ]
+  },
+  "source_version": "See data/week3_manifest.json and docs/week3_data_inventory.md",
+  "access_rights": "Not verified for sharing: S01 and S02 have no stated licence. Check before sharing."
+}

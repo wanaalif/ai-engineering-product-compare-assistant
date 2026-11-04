@@ -29,18 +29,19 @@ This cannot satisfy the requirements alone. The model has no access to the 2023 
 | ADR3: Include grounding and citation check before the response | FR4, RAI1: claims must be supported and cited | Prompt-based citation only; check after generation | Grounding and Citation Check on the generated answer | Extra latency and cost (NFR1, NFR4), but fewer unsupported claims. |
 | ADR4: Include session-scoped conversation context | FR6: follow-up questions must work | Stateless queries; session-scoped context | Session Context kept only for the current conversation | More context handling and risk of carrying wrong context, but natural follow-ups; nothing persists after the session. |
 
-## 4. Initial Requirements Traceability Matrix
+## 4. Traceability Matrix
 
 | Objective | Requirement | Evaluation Criterion | Architecture Element | Later Evidence |
-|---|---|---|---|---|
-| O1 | FR1, FR2, FR3 / NFR2 | Answer correctness | Language Model Service; Knowledge Access | Planned: rubric scores on ES1 |
+| --- | --- | --- | --- | --- |
+| O1 | FR1, FR2, FR3 / NFR2 | Answer correctness | Language Model Service; Knowledge Access | Planned: rubric scores on ES1. Data ready: `data/processed/prepared_meta.jsonl` (Week 3) |
 | O1 | FR6 | Follow-up handling | Session Context | Planned: multi-turn results on ES3 |
-| O2 | NFR3 | Retrieval relevance | Knowledge Access; Knowledge Source | Planned: Recall@5 and MRR versus BM25 and dense baselines |
-| O2 | FR4 / RAI1 | Source citation and support; claim faithfulness | Grounding and Citation Check | Planned: citation and faithfulness results on ES1 |
-| O2 | FR5 / RAI4 | Refusal of unsupported and out-of-scope queries | Scope and Intent Control | Planned: refusal results on ES2 |
-| O2 | RAI2 | Review attribution and balance | Knowledge Access (review metadata); Grounding and Citation Check | Planned: attribution results on ES4 |
-| O3 | RAI3 | Coverage fairness | Evaluation Points | Planned: stratified correctness gap on ES5 |
-| O3 | NFR1 | Response latency | End-to-end interaction path; Evaluation Points | Planned: p90 latency over the defined workload |
+| O2 | NFR3 | Retrieval relevance | Knowledge Access; Knowledge Source | Planned: Recall@5 and MRR versus baselines. Data ready: `data/week3_manifest.json` (Week 3) |
+| O2 | FR4 / RAI1 | Source citation and support; claim faithfulness | Grounding and Citation Check | Planned: results on ES1. Citable IDs and pages in `data/processed/prepared_text.jsonl` (Week 3) |
+| O2 | FR5 / RAI4 | Refusal of unsupported and out-of-scope queries | Scope and Intent Control | Planned: results on ES2. Price stored as `price_2023_snapshot` (Week 3) |
+| O2 | RAI2 | Review attribution and balance | Knowledge Access (review metadata) | Planned: results on ES4. Review fields kept in `prepared_reviews.jsonl` (Week 3) |
+| O3 | RAI3 | Coverage fairness | Evaluation Points | Planned: results on ES5. Store and `rating_number` kept, `has_*` flags added (Week 3) |
+| O3 | NFR5 | Maintainability | Knowledge Source | Pipeline rerun with PASS in `data/pipeline_v1/` (Week 3) |
+| O3 | NFR1 | Response latency | End-to-end interaction path | Planned |
 
 ## 5. Final Review Checklist
 
