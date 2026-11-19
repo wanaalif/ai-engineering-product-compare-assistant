@@ -109,12 +109,5 @@ The repeatability check (Cell 18) reruns each pipeline and compares source finge
 | Part C document pipeline | `data/pipeline_v1/documents/` | Yes |
 | Run evidence | `docs/week3_run_evidence.md` | Yes |
 
-The full prepared S01 and S02 files stay in the authorised working storage (the Colab session or your own Drive) and can be rebuilt from the notebook.
+The full prepared S01 and S02 files stay in the authorised working storage and can be rebuilt from the notebook.
 
-## 7. Provenance and Access Caveats
-
-- **S01 and S02:** the dataset card states no licence. The data is used for coursework only, and the manifests record "access rights: not stated".
-- **S02 subset:** only the first 500,000 review rows are scanned, so the subset is not a random sample of all headphone reviews.
-- **S03:** CC BY 4.0 per the article page. The paper also discusses health risks of earbuds; FR8 forbids health advice, so the assistant must report these only as consumer perceptions and refuse health advice questions (to be tested in the scope and safety set).
-- **S04 and S05:** CC BY 4.0.
-- **A hash is not an authorisation.** SHA-256 values prove which file was processed, not that it may be shared or that its quality is good. Quality review is part of Topic 4.
