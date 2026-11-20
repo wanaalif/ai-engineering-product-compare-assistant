@@ -126,7 +126,7 @@ This section does not claim anything about system accuracy or fairness. That nee
 |---|---|---|
 | E1 | Lineage manifest and Part B record of each source and output | `data/week3_manifest.json` |
 | E2 | Part C pipeline manifests (same hashes as Part B) | `data/pipeline_v1/json/pipeline_manifest.json`, `data/pipeline_v1/documents/pipeline_manifest.json` |
-| E3 | Week 3 run evidence and notebook outputs (Cells 9 to 12, 18, 19) | `notebooks/week3_pipeline.ipynb`, `docs/week3_run_evidence.md`, `docs/week3_data_inventory.md` |
+| E3 | Week 3 run evidence and notebook outputs (Cells 9 to 12, 18, 19) | `notebooks/week3_pipeline.ipynb`, `docs/week3_data_inventory.md` |
 | E4 | Audit script output on the committed files (V1, V2 screen, ligatures, terms, samples) | `docs/week4_audit_checks.py` (run: `python docs/week4_audit_checks.py`) |
 
 ## Appendix B: Not Verified Items and the Smallest Next Check

@@ -27,8 +27,6 @@ The Topic 2 architecture element served is the **Knowledge Source** (three store
 
 ## 2. Part B Comparison and Evidence
 
-Each comparison uses the same input for both configurations. The numbers are in `docs/week3_run_evidence.md`.
-
 ### S01 product metadata (JSON pathway)
 
 |                      | Config A                                                     | Config B                                                              |
@@ -107,7 +105,6 @@ The repeatability check (Cell 18) reruns each pipeline and compares source finge
 | Part B lineage manifest | `data/week3_manifest.json` | Yes |
 | Part C JSON pipeline | `data/pipeline_v1/json/` | Manifest only |
 | Part C document pipeline | `data/pipeline_v1/documents/` | Yes |
-| Run evidence | `docs/week3_run_evidence.md` | Yes |
 
 The full prepared S01 and S02 files stay in the authorised working storage and can be rebuilt from the notebook.
 
