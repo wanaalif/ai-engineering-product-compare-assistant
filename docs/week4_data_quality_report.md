@@ -139,3 +139,9 @@ This section does not claim anything about system accuracy or fairness. That nee
 | Reference integrity, review coverage, duplicates, contact details in review text (full files) | `python docs/week4_audit_checks.py --full-meta data/processed/prepared_meta.jsonl --full-reviews data/processed/prepared_reviews.jsonl` |
 | Non-headphone share in the full S01 file | Take 50 random titles from the full file and judge them by hand |
 | Accuracy of chunks against the PDFs | Compare 10 random chunks with the PDF pages |
+
+## 9. Post-Audit FR7 Progress Note (21 November 2026)
+
+This note supplements, and does not change, the 18 November audit results or its quality-gate decision. On 20 November, a separate student-authored [Headphone Technical Knowledge Base v1 (Grounded Draft)](../Headphone%20Technical%20Knowledge%20Base%20v1%20(Grounded%20Draft).md) was added to the project. Its progress record lists 80 grounded entries (Pass 1: 31; Pass 2: 49) and about 90 candidate terms still names-only, against a 150-250-entry target. The entries include impedance, driver types, ANC, distortion, and open-/closed-back designs. The draft flags EQ and other terms as unfinished and SBC/AAC primary-source specifications as not yet grounded.
+
+This is progress on FR7 documentation, not a new result from the Week 3 ingestion pipeline. The audit finding that the existing 147 PDF chunks contain no impedance or driver coverage remains true for those chunks; the new draft is not represented in the manifests, has not been ingested, and was not audited by the checks in this report. Review the draft's source support, provenance, rights, privacy, and content before deciding whether to integrate it and rerun pipeline validation.

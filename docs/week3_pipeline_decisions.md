@@ -108,3 +108,9 @@ The repeatability check (Cell 18) reruns each pipeline and compares source finge
 
 The full prepared S01 and S02 files stay in the authorised working storage and can be rebuilt from the notebook.
 
+## 7. FR7 Knowledge-Base Progress Update (21 November 2026)
+
+The [Headphone Technical Knowledge Base v1 (Grounded Draft)](../Headphone%20Technical%20Knowledge%20Base%20v1%20(Grounded%20Draft).md), prepared 20 November, is a separate, student-authored supplement: 80 grounded entries across two passes, with about 90 further terms still names-only. It is not currently an S01-S05 input, is not represented in the manifests, and is not included in the 147-chunk count or the Week 3 repeatability check. Therefore, the latest verified ingestion evidence remains the saved run from 4 November 2026.
+
+No notebook rerun is needed just to update FR7 drafting progress. When the draft is ready to become retrieval data, first settle its source/provenance and rights metadata, assign stable record IDs, define preparation and validation rules, then add it as a distinct input and rerun the relevant pipeline and quality checks. Do not revise the historical Week 3 counts to include it before that run.
+

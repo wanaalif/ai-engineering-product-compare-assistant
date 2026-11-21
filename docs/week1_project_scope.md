@@ -63,19 +63,6 @@ Online shoppers comparing similar headphones, particularly those who are not tec
 | **Source 4** | Gutierrez-Parera, P., & Lopez, J. J. (2016). Influence of the quality of consumer headphones in the perception of spatial audio. _Applied Sciences, 6_(4), 117. https://doi.org/10.3390/app6040117                                                                                                                 |
 | **Source 5** | Välimäki, V., & Reiss, J. D. (2016). All about audio equalization: Solutions and frontiers. _Applied Sciences, 6_(5), 129. https://doi.org/10.3390/app6050129                                                                                                                                                      |
 
-## Similar to EduAdvisor
-
-Document-grounded Q&A using RAG; answers cite official or source passages; guardrails and refusal for out-of-scope questions; evaluation of answer quality, groundedness, latency, and safety.
-
-## Different from EduAdvisor
-
-- Semi-structured product data (metadata fields plus free-text reviews) instead of policy PDFs.
-- Multi-item comparison: the assistant must retrieve and contrast several products, not look up one rule.
-- Review text can be subjective, conflicting, or manipulated, so evidence must be weighed and attributed.
-- Data is a 2023 snapshot, so the assistant must refuse current price and stock questions.
-- Possible extension toward agentic behaviour (e.g., a comparison tool) in later topics.
-- Domain-specific vocabulary (e.g., noise cancelling, codecs) needs technical reference documents so the assistant can explain terms in plain language.
-
 ## Responsible AI Risks
 
 - **Risk 1: Hallucination.** The model invents or misstates a specification or compatibility claim, leading to a wrong purchase. _Control:_ answer only from retrieved passages, show source product IDs, refuse when evidence is missing.

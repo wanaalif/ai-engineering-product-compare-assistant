@@ -2,7 +2,7 @@
 
 Version: 1.1 (Week 3, Step A4)
 
-Items marked **[ADD]** or **[VERIFY]** must be completed before the final commit. Evidence in section 4 comes from the Colab notebook `ai_engineering_product_compare_assistant_notebook.ipynb`.
+Evidence in section 4 comes from the Colab notebook `ai_engineering_product_compare_assistant_notebook.ipynb`.
 
 ## 1. Source Table
 
@@ -126,3 +126,9 @@ Items marked **[ADD]** or **[VERIFY]** must be completed before the final commit
 - SHA-256: `06653abb3403cbd5a3c1bad8c69f93c72ef956b9259b6af8cde26afe9b3e9e51`
 - Pages: 46. Pages with extractable text: 46.
 - Text sample (first 300 characters): "applied sciences Review All About Audio Equalization: Solutions and Frontiers Vesa Välimäki 1,* and Joshua D. Reiss 2 1 Department of Signal Processing and Acoustics, Aalto University, Espoo 02150, Finland 2 Centre for Digital Music, Queen Mary University London, London E1 4NS, UK; joshua.reiss@q"
+
+## 5. FR7 Supplementary Knowledge-Base Progress (21 November 2026)
+
+The separately authored [Headphone Technical Knowledge Base v1 (Grounded Draft)](../Headphone%20Technical%20Knowledge%20Base%20v1%20(Grounded%20Draft).md) was prepared on 20 November to extend plain-language FR7 coverage. Its current progress record states 80 grounded entries (Pass 1: 31; Pass 2: 49) and about 90 additional candidate terms listed by name only, against a 150-250-entry target. Entries are paraphrased from the draft's cited sources; they are not extracted from the Week 3 PDFs alone.
+
+This draft is supplementary documentation, not a new S06 source and not an input to `week3_manifest.json` or either `pipeline_v1` manifest. It has not yet been ingested, independently audited, or approved for retrieval. The Week 3 PDF-corpus finding that no chunk covers impedance or drivers remains accurate for that corpus, even though the separate draft now contains entries on those terms. Continue batch-by-batch drafting and source checking; decide on corpus hygiene, provenance/rights, stable record IDs, and validation before integrating it into a future pipeline run.
